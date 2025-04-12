@@ -2,82 +2,64 @@
 
 ## Project Overview
 
-FSND_Game_Design_API is a RESTful API designed specifically for game developers. This API provides essential endpoints and functionalities that streamline the game design and development process. It is ideal for projects within the Full Stack Web Developer Nanodegree program. The API is designed with a focus on structured learning, curriculum, and education.
+FSND_Game_Design_API is a RESTful API designed specifically for game developers. It provides essential endpoints and functionalities that streamline game design and development processes, making it an ideal tool for projects in the Full Stack Web Developer Nanodegree program. It includes a variety of features to assist in the development of games, such as user authentication, game state management, leaderboards, and more.
 
 ## Setup and Installation
 
-To get started with FSND_Game_Design_API, follow these steps:
+To set up and install FSND_Game_Design_API, follow these steps:
 
-1. Clone the repository to your local machine.
-```bash
-git clone https://github.com/[username]/FSND_Game_Design_API.git
-```
-2. Navigate to the project directory.
-```bash
-cd FSND_Game_Design_API
-```
-3. Install the necessary dependencies.
-```bash
-npm install
-```
-4. Start the server.
-```bash
-npm start
-```
-The server should now be running and ready to accept requests at `http://localhost:3000`.
+1. Clone this repository to your local machine using `git clone https://github.com/[username]/FSND_Game_Design_API.git`
+
+2. Navigate to the project directory `cd FSND_Game_Design_API`
+
+3. Install the required dependencies using `pip install -r requirements.txt`
+
+Please note that this project requires Python 3.8 or later.
 
 ## Usage Examples
 
-Here are some examples of how to use the API:
+Once you have the API running, you can interact with it using HTTP requests. Here are some examples:
 
-1. Get all games:
-```http
-GET /api/games
+- To create a new game:
 ```
-
-2. Get a specific game by ID:
-```http
-GET /api/games/:id
-```
-
-3. Create a new game:
-```http
-POST /api/games
-Content-Type: application/json
-
+POST /games
 {
-    "name": "Game Name",
-    "description": "Game Description",
-    "developer": "Game Developer"
+  "name": "New Game",
+  "description": "A description of the game",
 }
 ```
-4. Update a game:
-```http
-PUT /api/games/:id
-Content-Type: application/json
 
+- To get a list of all games:
+```
+GET /games
+```
+
+- To update a game:
+```
+PUT /games/{game_id}
 {
-    "name": "Updated Game Name",
-    "description": "Updated Game Description",
-    "developer": "Updated Game Developer"
+  "name": "Updated Game",
+  "description": "An updated description",
 }
 ```
-5. Delete a game:
-```http
-DELETE /api/games/:id
+
+- To delete a game:
+```
+DELETE /games/{game_id}
 ```
 
-## Contribution Guidelines
+## Contributing
 
-We welcome and appreciate any contributions to the FSND_Game_Design_API. To contribute:
+We welcome contributions from the community. To contribute:
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes in your branch.
-4. Submit a pull request with a detailed description of the changes.
+1. Fork this repository.
+2. Create a new branch on your forked repository.
+3. Commit your changes to your new branch.
+4. Push your changes to your forked repository.
+5. Submit a pull request to this repository.
 
-Before contributing, please ensure that your code adheres to our style and contribution guidelines.
+Before submitting your pull request, please ensure your code adheres to the existing style to maintain consistency in the codebase.
 
 ## License
 
-FSND_Game_Design_API is licensed under the MIT License. For more information, please refer to the [LICENSE](LICENSE) file in the repository.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
